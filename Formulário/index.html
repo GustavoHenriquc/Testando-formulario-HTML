@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./style.css">
+    <title>Formulário para Solicitação de Troca de Turno</title>
+</head>
+<body>
+
+    <header>
+        <h1 id="headtitle">Formulário para alteração de turnos</h1>
+    </header>
+
+
+    <form action="form.php" method="post" id="form">
+        
+        <fieldset>
+            <legend id="user-legend">Dados do Usuário</legend>
+            <p><label for="cnome"> Nome: </label>
+            <input type="text" id="cnome" name="_nome" size="40" maxlength="20" placeholder="Primeiro nome..." ></p>
+            <p> <label for="csur">Sobrenome: </label>
+            <input type="text" name="_sur" id="csur" size="40" maxlenght="20" placeholder="Sobrenome."> </p>
+            <p> <label for="cmail"> E-Mail: </label>
+            <input type="email" id="cmail" name="_mail" size="40" maxlenght="20" placeholder="Digite seu email." > </p>
+            <p><label for="creg"> Nº Reg. Funcionário:</label>
+            <input type="number" id="creg" name="_regFuncionario" size="8" maxlenght="8" placeholder="Informe seu R.F" min="8" max="8" ></p>
+        </fieldset>
+        <fieldset>
+            <legend id="user-turnoA">Turno Atual</legend>
+            <p> <label for="cTurnoAtual-inicio">Qual o horário de início do seu turno atual?</label> </br>
+            <input type="time" id="cTurnoAtual-inicio" name="_TurnoAtualI" > </p>
+            <p> <label for="cTurnoAtual-final">Qual o horário de término do seu turno atual?</label> </br>
+            <input type="time" id="cTurnoAtual-final" name="_TurnoAtualF" > </p>
+            <p id="obsI">Obs: Turnos são definidos em intervalos de 3 horas.</p>
+
+        </fieldset>
+        <fieldset>
+            <legend id="user-turnoD">Turno Desejado</legend>
+            <p> <label for="cTurnoDesejado-inicio">Qual o horário de início do turno desejado?</label> </br>
+            <input type="time" id="cTurnoDesejado-inicio" name="_TurnoDesejadoI" > </p>
+            <p> <label for="cTurnoDesejado-final">Qual o horário de término do turno desejado?</label> </br>
+            <input type="time" id="cTurnoDesejado-final" name="_TurnoDesejadoF" > </p>
+            <p id="obsII">Obs: Turnos são definidos em intervalos de 3 horas.</p>
+        </fieldset>
+        <fieldset>
+            <legend id="motivo"> Explique o motivo da troca de Turno </legend>
+            <p id="msg_txt"> <label for="cMsg"> Digite sua mensagem aqui: </label> </p>
+            <input type="textarea" id="cMsg" name="_Mensagem" size="200" maxlength="50" placeholder="Digite sua mensagem aqui.">
+        </fieldset>
+        <fieldset>
+            <legend id="anexo">Caso necessário, anexe arquivos para comprovação aqui.</legend>
+            <p> <label for="cAnex"> Selecione o arquivo: </label> </p>
+            <input type="file" id="cAnex" name="_Anexo" size="150">
+        </fieldset>
+
+        <fieldset>
+            <p>Antes de enviar confira as informações novamente.</p>
+            <input type= "submit" id="sub" name="_envio" size="50">
+        </fieldset>
+    
+
+    </form>
+    
+</body>
+</html>
